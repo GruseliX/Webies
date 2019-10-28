@@ -1,0 +1,8 @@
+de\uniulm\in\ki\webeng\serverscaffold\model\Request.class
+de\uniulm\in\ki\webeng\serverscaffold\model\Response.class
+Main.class
+de\uniulm\in\ki\webeng\serverscaffold\ServerThread.class
+de\uniulm\in\ki\webeng\serverscaffold\ServerConfiguration.class
+TestHTTPMessageBuilder.class
+de\uniulm\in\ki\webeng\serverscaffold\HTTPMessageBuilder.class
+de\uniulm\in\ki\webeng\serverscaffold\ClientHandler.class
