@@ -6,7 +6,9 @@ import java.io.InputStreamReader;
 
 /**
  * Main entry point Created by Markus Brenner on 07.09.2016.
+
  */
+
 class Main {
     public static void main(String[] args) throws IOException {
         // start a new server
