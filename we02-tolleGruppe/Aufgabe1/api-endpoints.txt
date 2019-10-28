@@ -1,0 +1,40 @@
+Aufgabe 1 c.)
+
+price
+----------------------------------------------------------------------
+GET /price/ HTTP/1.1
+HOST: morgal.informatik.uni-ulm.de:8000
+
+HTTP/1.1 200 OK
+Server: nginx/1.10.3 (Ubuntu)
+Date: Mon, 28 Oct 2019 18:42:18 GMT
+Content-Type: application/xml
+Content-Length: 411
+Connection: keep-alive
+
+<prices><description>Ulm feiert Tarif</description><price><name>Nachts</name><start>00:00</start><end>08:00</end><cost>0.80</cost></price><price><name>Morgens</name><start>08:00</start><end>12:00</end><cost>0.90</cost></price><price><name>Mittags</name><start>12:00</start><end>18:00</end><cost>1.50</cost></price><price><name>Abends</name><start>18:00</start><end>23:59</end><cost>1.20</cost></price></prices>
+
+-----------------------------------------------------------------------
+
+line
+-----------------------------------------------------------------------
+GET /line/ HTTP/1.1
+HOST: morgal.informatik.uni-ulm.de:8000
+
+HTTP/1.1 200 OK
+Server: nginx/1.10.3 (Ubuntu)
+Date: Mon, 28 Oct 2019 18:44:53 GMT
+Content-Type: application/json
+Content-Length: 153
+Connection: keep-alive
+
+{
+  "description" : "Public transport line data endpoint",
+  "urls" : [
+    "data/",
+    "stop/",
+    "stop/$id",
+    "stop/$id/departure/"
+  ]
+}
+------------------------------------------------------------------------
