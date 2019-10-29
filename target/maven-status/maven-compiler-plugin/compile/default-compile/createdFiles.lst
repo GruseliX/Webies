@@ -1,8 +1,0 @@
-Main.class
-de/uniulm/in/ki/webeng/serverscaffold/HTTPMessageBuilder.class
-de/uniulm/in/ki/webeng/serverscaffold/ServerConfiguration.class
-de/uniulm/in/ki/webeng/serverscaffold/ServerThread.class
-de/uniulm/in/ki/webeng/serverscaffold/ClientHandler.class
-de/uniulm/in/ki/webeng/serverscaffold/model/Response.class
-TestHTTPMessageBuilder.class
-de/uniulm/in/ki/webeng/serverscaffold/model/Request.class
