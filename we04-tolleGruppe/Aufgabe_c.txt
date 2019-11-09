@@ -1,0 +1,20 @@
+    public static Response validate(Response remoteResponse) {
+        Response res = remoteResponse;
+
+        if(res == null || !isValidXML(res) || res.getResponseCode().startsWith("503")){
+            res = loadCache();
+        }
+        else {
+            res = transformResponse(res);
+            saveCache(res);
+        }
+
+        if(res == null){
+            Response err = new Response();
+            err.setResponseCode(500, "Internal Server Error");
+            return err;
+        }
+        else{
+            return res;
+        }
+    }
