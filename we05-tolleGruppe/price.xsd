@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 	<!--root element prices-->
@@ -14,7 +14,7 @@
 	</xs:element>
 	
 	<!--description enthaelt text-->
-	<xs:element name="description" type="xs:string">
+	<xs:element name="description">
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<!--\s steht für whitespace-->
@@ -25,7 +25,7 @@
 	</xs:element>
 
 	<!--price besteht aus jeweils genau einem name, start, end und cost Element-->
-	<xs:element name="prices">
+	<xs:element name="price">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element ref="name"/>
@@ -37,7 +37,7 @@
 	</xs:element>
 
 	<!--name hat text mit A-Z(groß und klein), leerzeichen, Bindestrich und Zahlen)-->
-	<xs:element name="name" type="xs:string">
+	<xs:element name="name">
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
 				<!--\s steht für whitespace-->
@@ -48,9 +48,9 @@
 	</xs:element>
 
 	<!--start-tag -->
-	<xs:element name="start" type="xs:integer">
+	<xs:element name="start">
 		<xs:simpleType>
-			<xs:restriction base="xs:integer">
+			<xs:restriction base="xs:string">
 				<!--vom Typ HH:MM -->
 				<xs:pattern value="[0-2][0-9][:][0-5][0-9]"/> 
 			</xs:restriction>
@@ -58,9 +58,9 @@
 	</xs:element>
 
 	<!--end-tag -->
-	<xs:element name="end" type="xs:integer">
+	<xs:element name="end">
 		<xs:simpleType>
-			<xs:restriction base="xs:integer">
+			<xs:restriction base="xs:string">
 				<!--vom Typ HH:MM -->
 				<xs:pattern value="[0-2][0-9][:][0-5][0-9]"/> 
 			</xs:restriction>
@@ -68,7 +68,7 @@
 	</xs:element>
 
 	<!--cost-tag -->
-	<xs:element name="cost" type="xs:decimal">
+	<xs:element name="cost">
 		<xs:simpleType>
 			<xs:restriction base="xs:decimal">
 				<!--positive Gleitkommazahl-->
