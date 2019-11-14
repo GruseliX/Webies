@@ -19,7 +19,7 @@
 			<xs:restriction base="xs:string">
 				<!--\s steht für whitespace-->
 				<!-- Am Anfang oder Ende einer Zeichenklasse stehende Bindestriche werden als das Zeichen selbst interpretiert.-->
-				<xs:pattern value="([-a-zA-Z0-9])*"/> 
+				<xs:pattern value="([-a-zA-Z0-9\s])*"/> 
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
@@ -42,7 +42,7 @@
 			<xs:restriction base="xs:string">
 				<!--\s steht für whitespace-->
 				<!-- Am Anfang oder Ende einer Zeichenklasse stehende Bindestriche werden als das Zeichen selbst interpretiert.-->
-				<xs:pattern value="([-a-zA-Z0-9])*"/> 
+				<xs:pattern value="([-a-zA-Z0-9\s])*"/> 
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
