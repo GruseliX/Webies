@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://localhost:1334/price.xsd">
+
+    <xs:element name="prices">
+        <xs:complexType>
+            <xs:element name="dercription" type="xs:string"/>
+            <xs:element name="price">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="name" type="xs:string"/>
+                        <xs:element name="start" type="xs:time"/>
+                        <xs:element name="end" type="xs:time"/>
+                        <xs:element name="cost" type="xs:decimal"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:complexType> 
+    </xs:element>
+</xs:schema>
