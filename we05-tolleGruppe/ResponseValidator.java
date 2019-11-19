@@ -127,13 +127,28 @@ public class ResponseValidator {
      */
     public static boolean isValidXML(Response remoteResponse) {
         Document doc = extractXML(remoteResponse);
-        if (doc == null)
+        if (doc == null){
             return false;
+        }
 
         // create a validator using the schema
         File schemaFile = new File("schema.xsd"); // TODO add your schema to the project root folder
-        // TODO implement
-        return true;
+
+        if(!schemaFile.exists()){
+            System.err.println("schema.xsd file not exists");
+            return false;
+        }
+
+        SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        try {
+            Schema schema = schemaFactory.newSchema(schemaFile);
+            Validator validator = schema.newValidator();
+            validator.validate(new DOMSource(doc));
+            return true;
+        } catch (SAXException | IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     /**
