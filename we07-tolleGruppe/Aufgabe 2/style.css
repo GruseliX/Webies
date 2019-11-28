@@ -1,5 +1,26 @@
 
+:root{
+    --color-header:                 #080808;    /* header bg*/
+    --color-header-text:            #c7c7c7;    /* header text*/
+    --color-header-link-selected:   #3f3e3e;    /* header selected*/
+    --color-header-link-hover:      #222222;    /* header hover*/
+    --color-page:                   #c7c7c7;    /* page bg */
+    --color-page-text:              #1c1c1c;    /* page text */
+    --color-link:                   #f7a269;	/* Link default */
+    --color-link-visit:             #C9C9C9;    /* Link visit */
+    --color-:                       #833b96;    /* */ 
+    --color-link-hover:             #CC3B99;    /* Link hover */                         
+    --color-border:                 #5B5759;    /* border */
+    --color-box:                    #8D8D8D;	/* box */ 
+
+
+}  
+
+
 body{
+    font-family: 'Rubik', sans-serif;
+    color: var(--color-page-text);
+    background-color: var(--color-page);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -7,57 +28,73 @@ body{
     position: absolute;
 }
 
-a:default{
-
-}
-
-a:hover{
-
+a:link{
+    color: var(--color-link);
 }
 
 a:visited{
-
+    color: var(--color-link-visit);
 }
 
-a:checked{
-
+a:hover{
+    color: var(--color-link);
 }
 
 header{
-    background-color: #0a0a0a;
+    background-color:   var(--color-header);
+    color: var(--color-header-text);
     height: 6em;
     width: 100%;
 }
 
 header > h1 {
     width: 100%;
-    color:#d0d0d0;
     position: relative;
     top:5%;
     left:15%
 }
 header > ul {
+    position: relative;
+    top:4%;
+    left:15%;
     list-style-type:none;
+    padding:0%;
+    margin:0%;
 }
 
 header > ul > li {
     float:left;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0%;
+    margin-bottom:0%;
+    width: 4em;
+    height: 1.5em;
+}
+
+header > ul > li.selected{
+    background-color: var(--color-header-link-selected);
 }
 
 header > ul > li:hover{
-    background-color: black;
+    background-color: var(--color-header-link-hover);
+   
 } 
 
-header > ul > li.selected{
-    background-color: black;
+.container{
+    margin-left: 15%;
 }
+
+
+
+
 
 @media only all and (max-width: 300px){
     .col{
 
     }
     .row{
-        
+
     }
 
 } 
