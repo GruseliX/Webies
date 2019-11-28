@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Web Engeneering Routenplaner</title>
+</head>
+
+<body>
+    <hedder>
+        <h1>Web Engeneering Routenplaner</h1>
+        <!--Kleine Frage wenn diese seite komplett ohne styles auskommen sollte, warum sollen die folgenden Links alsListe ausgeführt werden. wenn es doch genau so wie in der Vorgabe aussehen sollte.-->
+        <ul style="list-style-type:none;">
+            <li style="float:left;">
+                <a href="index.html">Home</a>
+            </li>
+            <li style="float:left;">
+                <a href="stops.html">Stops</a>
+            </li>
+        </ul>
+
+
+        <!--Alternative, mit gleicher Darstellung aber ohne css-Elemente -->
+        <!-- 
+                <p><a href="indax.html">Home</a> <a href="stops.html">Stops</a></p> 
+            -->
+
+    </hedder>
+    <main style="content: '';clear: both;display: table;">
+        <h2>Favotit: Haltestellen</h2>
+        <favorit>
+            <ul>
+                <li>
+                    <p><span>16:03</span> <span>Linie 5</span> (<span>Wissenschftsstadt</span>)</p>
+                </li>
+                <li>
+                    <p><span>16:10</span> <span>Linie 3</span> (<span>Wiblingen</span>)</p>
+                </li>
+            </ul>
+            </faforit>
+            <preference>
+                <form action="form()">
+                    <input list="start_home_list" type="text" name="start_home" placeholder="Starthaltestelle eingeben">
+                    <datalist id="start_home_list">
+                        <option value="Universität Ulm">
+                        <option value="Ehinger Tor">
+                        <option value="Rathaus">
+                        <option value="Theater">
+                        <option value="Willy-Brandt-Platz">
+                    </datalist>
+                    <input list="stop_home_list" type="text" name="end_home" placeholder="Endhaltestelle eingeben">
+                    <datalist id="stop_home_list">
+                        <option value="Universität Ulm">
+                        <option value="Ehinger Tor">
+                        <option value="Rathaus">
+                        <option value="Theater">
+                        <option value="Willy-Brandt-Platz">
+                    </datalist>
+                    <input type="submit" value="->">
+                </form>
+            </preference>
+            <result>
+                <p><span>Linie 15</span> (<span>Ulm Willy-Brndt-Platz</span>): <br><span>Ulm</span> <span>Universität
+                        West</span> (<span>13:36</span>) -> <span>Ulm</span> <span>Willy-Brandt-Platz</span>
+                    (<span>14:04</span>)<br>
+                    <span>Linie 4</span> (<span>Grimmelfingen Eisenbahnstrasse</span>): <br><span>Ulm</span>
+                    <span>Willy-Brndt-Platz</span> (<span>14:04</span>) -> <span>Ulm</span> <span>Rathaus</span>
+                    (<span>14:09</span>)<br>
+                    <span>Linie 5</span> (<span>Ludwigsfeld Hasenweg</span>): <br><span>Ulm</span> <span>Rathaus</span>
+                    (<span>14:09</span>) -> <span>Neu-Ulm</span> <span>Rathaus</span> (<span>14:11</span>)</p>
+            </result>
+            <asside>
+
+            </asside>
+    </main>
+    <footer>
+        <p>&copy; Copyright WebEnge 2019, Gruppe N</p>
+    </footer>
+</body>
+
+</html>
