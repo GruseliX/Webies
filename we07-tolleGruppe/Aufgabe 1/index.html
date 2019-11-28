@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <title>Web Engeneering Routenplaner</title>
 </head>
@@ -22,24 +23,42 @@
         </faforit>
         <preference>
             <form action="form()">
-                <input type="text" name="starthaltestelle" placeholder="Starthaltestelle">
-                <input type="text" name="endhaltestelle" placeholder="Endhaltestelle">
+                <input list="start_home_list" type="text" name="start_home" placeholder="Starthaltestelle eingeben">
+                <datalist id="start_home_list">
+                    <option value="Universität Ulm">
+                    <option value="Ehinger Tor">
+                    <option value="Rathaus">
+                    <option value="Theater">
+                    <option value="Willy-Brandt-Platz">
+                </datalist>
+                <input list="stop_home_list" type="text" name="end_home" placeholder="Endhaltestelle eingeben">
+                <datalist id="stop_home_list">
+                        <option value="Universität Ulm">
+                        <option value="Ehinger Tor">
+                        <option value="Rathaus">
+                        <option value="Theater">
+                        <option value="Willy-Brandt-Platz">
+                    </datalist>
                 <input type="submit" value="->">
             </form>
         </preference>
         <result>
             <p><span>Linie 15</span> (<span>Ulm Willy-Brndt-Platz</span>): <br><span>Ulm</span> <span>Universität
-                    West</span> (<span>13:36</span>) -> <span>Ulm</span> <span>Willy-Brand-Platz</span>
+                    West</span> (<span>13:36</span>) -> <span>Ulm</span> <span>Willy-Brandt-Platz</span>
                 (<span>14:04</span>)<br>
                 <span>Linie 4</span> (<span>Grimmelfingen Eisenbahnstrasse</span>): <br><span>Ulm</span>
                 <span>Willy-Brndt-Platz</span> (<span>14:04</span>) -> <span>Ulm</span> <span>Rathaus</span>
                 (<span>14:09</span>)<br>
                 <span>Linie 5</span> (<span>Ludwigsfeld Hasenweg</span>): <br><span>Ulm</span> <span>Rathaus</span>
                 (<span>14:09</span>) -> <span>Neu-Ulm</span> <span>Rathaus</span> (<span>14:11</span>)</p>
-            </result>
+        </result>
+        <asside>
+
+        </asside>
     </main>
     <footer>
-        <p>&copy; Copyright WebEnge 2019, Maybe rights are reserved</p>
+        <p>&copy; Copyright WebEnge 2019, Gruppe N</p>
     </footer>
 </body>
+
 </html>
