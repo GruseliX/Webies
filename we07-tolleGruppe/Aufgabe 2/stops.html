@@ -5,6 +5,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,
+        400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -13,10 +17,10 @@
         <!--Kleine Frage wenn diese seite komplett ohne styles auskommen sollte, warum sollen die folgenden Links alsListe ausgeführt werden. wenn es doch genau so wie in der Vorgabe aussehen sollte.-->
         <ul>
             <li>
-                <a href="index.html">Home</a>
+                <a href="./index.html">Home</a>
             </li>
             <li class="selected">
-                <a href="stops.html">Stops</a>
+                <a href="./stops.html">Stops</a>
             </li>
         </ul>
 
@@ -26,31 +30,37 @@
             <p><a href="indax.html">Home</a> <a href="stops.html">Stops</a></p> 
         -->
 
-    </headder>
+    </header>
     <div class="container">
-    <main style="content: '';clear: both;display: table;">
-        <figure>
-            <img src="map.png" alt="Google-maps Karte von Ulm">
-        </figure>
-        <preference>
-            <form>
-                <input list="filter_list" type="text" placeholder="Filter"><br>
-                <datalist id="filter_list">
-                    <option value="Universität Ulm">
-                    <option value="Ehinger Tor">
-                    <option value="Rathaus">
-                    <option value="Theater">
-                    <option value="Willy-Brandt-Platz">
-                </datalist>
-                <lable value="Schaffenhausen">Schaffenhausen</lable><input type="checkbox"><br>
-                <lable value="Heiringen">Heiringen</lable><input type="checkbox"><br>
-                <lable value="Ulm">Ulm</lable><input type="checkbox"><br>
-            </form>
-            </ppreference>
-    </main>
+        <main>
+            <preference class="col col-half-2">
+                <form >
+                    <input list="filter_list" type="text" placeholder="Filter"><br>
+                    <datalist id="filter_list">
+                        <option value="Universität Ulm">
+                        <option value="Ehinger Tor">
+                        <option value="Rathaus">
+                        <option value="Theater">
+                        <option value="Willy-Brandt-Platz">
+                    </datalist>
+                </form>
+            </preference>
+            <div class="col col-half-3">
+                    <figure id="fig_stops">
+                        <img src="./map.png" alt="Google-maps Karte von Ulm">
+                    </figure>
+                </div>
+            <resut>
+                <form>
+                    <lable value="Schaffenhausen">Schaffenhausen</lable> <input type="checkbox"><br>
+                    <lable value="Heiringen">Heiringen</lable> <input type="checkbox"><br>
+                    <lable value="Ulm">Ulm</lable> <input type="checkbox"><br>
+                </form>
+            </resut>
+        </main>
     </div>
     <footer>
-        <p>&copy; Copyright WebEnge 2019, Gruppe N</p>
+        <p class="footer_text">&copy; Copyright WebEnge 2019, Gruppe N</p>
     </footer>
 </body>
 
