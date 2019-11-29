@@ -34,8 +34,8 @@
     <div class="container">
         <main>
             <preference class="col col-half-2">
-                <form >
-                    <input list="filter_list" type="text" placeholder="Filter"><br>
+                <form id="filter_stops"> 
+                    <input id="filter_item_stops" list="filter_list" type="text" placeholder="Filter Haltestellen"><br>
                     <datalist id="filter_list">
                         <option value="Universität Ulm">
                         <option value="Ehinger Tor">
@@ -46,15 +46,21 @@
                 </form>
             </preference>
             <div class="col col-half-3">
-                    <figure id="fig_stops">
-                        <img src="./map.png" alt="Google-maps Karte von Ulm">
-                    </figure>
-                </div>
-            <resut>
+                <figure id="fig_stops">
+                    <img src="./map.png" alt="Google-maps Karte von Ulm">
+                </figure>
+            </div>
+            <resut class="col col-half-2">
                 <form>
-                    <lable value="Schaffenhausen">Schaffenhausen</lable> <input type="checkbox"><br>
-                    <lable value="Heiringen">Heiringen</lable> <input type="checkbox"><br>
-                    <lable value="Ulm">Ulm</lable> <input type="checkbox"><br>
+                    <div class="res_item">
+                        <lable value="Schaffenhausen">Schaffenhausen</lable> <input type="checkbox">
+                    </div>
+                    <div class="res_item">
+                        <lable value="Heiringen">Heiringen</lable> <input type="checkbox">
+                    </div>
+                    <div class="res_item">
+                        <lable value="Ulm">Ulm</lable> <input type="checkbox">
+                    </div>
                 </form>
             </resut>
         </main>
