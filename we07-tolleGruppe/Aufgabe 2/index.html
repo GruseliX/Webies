@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,
+        400,400i,500,500i,700,700i,900,900i&display=swap"
+        rel="stylesheet">
 
 
 </head>
@@ -14,7 +16,9 @@
 <body>
     <header>
         <h1>Web Engeneering Routenplaner</h1>
-        <!--Kleine Frage wenn diese seite komplett ohne styles auskommen sollte, warum sollen die folgenden Links alsListe ausgeführt werden. wenn es doch genau so wie in der Vorgabe aussehen sollte.-->
+        <!--Kleine Frage wenn diese seite komplett ohne styles auskommen sollte, 
+            warum sollen die folgenden Links alsListe ausgeführt werden. 
+            wenn es doch genau so wie in der Vorgabe aussehen sollte.-->
         <ul>
             <li class="selected">
                 <a href="index.html">Home</a>
@@ -25,21 +29,11 @@
         </ul>
     </header>
     <div class="container">
-    <main style="content: '';clear: both;display: table;">
-        <h2>Favortit: Haltestellen</h2>
-        <favorit>
-            <ul>
-                <li>
-                    <p><span>16:03</span> <span>Linie 5</span> (<span>Wissenschftsstadt</span>)</p>
-                </li>
-                <li>
-                    <p><span>16:10</span> <span>Linie 3</span> (<span>Wiblingen</span>)</p>
-                </li>
-            </ul>
-            </faforit>
-            <preference>
-                <form action="form()">
-                    <input list="start_home_list" type="text" name="start_home" placeholder="Starthaltestelle eingeben">
+        <main>
+            <preference class="coll col-half-0">
+                <form action="form()" id="pref_home">
+                    <input list="start_home_list" type="text" name="start_home" 
+                        placeholder="Starthaltestelle">
                     <datalist id="start_home_list">
                         <option value="Universität Ulm">
                         <option value="Ehinger Tor">
@@ -47,7 +41,8 @@
                         <option value="Theater">
                         <option value="Willy-Brandt-Platz">
                     </datalist>
-                    <input list="stop_home_list" type="text" name="end_home" placeholder="Endhaltestelle eingeben">
+                    <input list="stop_home_list" type="text" name="end_home" 
+                        placeholder="Endhaltestelle">
                     <datalist id="stop_home_list">
                         <option value="Universität Ulm">
                         <option value="Ehinger Tor">
@@ -58,23 +53,43 @@
                     <input type="submit" value="->">
                 </form>
             </preference>
-            <result>
-                <p><span>Linie 15</span> (<span>Ulm Willy-Brndt-Platz</span>): <br><span>Ulm</span> <span>Universität
-                        West</span> (<span>13:36</span>) -> <span>Ulm</span> <span>Willy-Brandt-Platz</span>
-                    (<span>14:04</span>)<br>
-                    <span>Linie 4</span> (<span>Grimmelfingen Eisenbahnstrasse</span>): <br><span>Ulm</span>
-                    <span>Willy-Brndt-Platz</span> (<span>14:04</span>) -> <span>Ulm</span> <span>Rathaus</span>
-                    (<span>14:09</span>)<br>
-                    <span>Linie 5</span> (<span>Ludwigsfeld Hasenweg</span>): <br><span>Ulm</span> <span>Rathaus</span>
-                    (<span>14:09</span>) -> <span>Neu-Ulm</span> <span>Rathaus</span> (<span>14:11</span>)</p>
+            <favorit class="col col-half-1">
+                    <h2>Favorit: Haltestellen</h2>
+                    <ul id="fav_home">
+                        <li>
+                            <span>16:03</span> <span>Linie 5</span> 
+                                (<span>Wissenschftsstadt</span>)
+                        </li>
+                        <li>
+                            <span>16:10</span> <span>Linie 3</span> 
+                                (<span>Wiblingen</span>)
+                        </li>
+                    </ul>
+                </favorit>
+            <result class="col col-full">
+                <div class="res_item"><span class="line">Linie 15</span> (<span class="line_name">Ulm Willy-Brndt-Platz</span>): 
+                        <br><span>Ulm</span> <span>Universität West</span> 
+                        ( <span>13:36</span> ) -> 
+                        <span>Ulm</span><span>Willy-Brandt-Platz</span>
+                        ( <span>14:04</span> )</div>
+                <div class="res_item"><span class="line">Linie 4</span> (<span class="line_name">Grimmelfingen Eisenbahnstrasse</span>): 
+                        <br><span>Ulm</span> <span>Willy-Brndt-Platz</span> 
+                        ( <span>14:04</span> ) -> 
+                        <span>Ulm</span> <span>Rathaus</span>
+                        ( <span>14:09</span> )</div>
+                <div class="res_item"><span class="line">Linie 5</span> (<span class="line_name">Ludwigsfeld Hasenweg</span>): 
+                        <br><span>Ulm</span> <span>Rathaus</span>
+                        ( <span>14:09</span> ) -> 
+                        <span>Neu-Ulm</span> <span>Rathaus</span> 
+                        ( <span>14:11</span> )</div>
             </result>
             <asside>
 
             </asside>
-    </main>
+        </main>
     </div>
     <footer>
-        <p>&copy; Copyright WebEnge 2019, Gruppe N</p>
+        <p class="footer_text">&copy; Copyright WebEnge 2019, Gruppe N, <a href="https://uni-ulm.de">Universität Ulm</a></p>
     </footer>
 </body>
 
