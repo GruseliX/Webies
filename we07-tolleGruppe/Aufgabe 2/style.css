@@ -68,6 +68,9 @@ header{
 img{
     width: 100%;
 }
+nav{
+    position:relative;
+}
 
 /*
 *********************************************************
@@ -87,7 +90,7 @@ header > h1 {
     top:5%;
     left:15%
 }
-header > ul {
+header > nav > ul {
     position: relative;
     top:4%;
     left:15%;
@@ -96,7 +99,7 @@ header > ul {
     margin:0%;
 }
 
-header > ul > li {
+header > nav > ul > li {
     float:left;
     text-align: center;
     padding-top: 0.5em;
@@ -106,12 +109,12 @@ header > ul > li {
     height: 1.5em;
 }
 
-header > ul > li.selected{
+header > nav > ul > li.selected{
     background-color: var(--color-header-link-selected);
     color:var(--color-link);
 }
 
-header > ul > li:hover{
+header > nav > ul > li:hover{
     background-color: var(--color-header-link-hover);
     color: var(--color-link-hover);
 } 
