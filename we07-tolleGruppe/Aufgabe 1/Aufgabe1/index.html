@@ -1,0 +1,77 @@
+<html>
+
+	<head>
+		<title> Web Engineering Routenplaner </title>
+		<Aufgabe 2.a>
+		<link rel="stylesheet" type="text/css" href="sytle.css">
+	</head>
+
+	<body>
+		<!--Aufgabe 1.b-->
+		<header>
+			<h1> Web Engineering Routenplaner </h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="stops.html">Stops</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<main>
+			<section id="routensuche">
+				<!--Aufgabe 1.d-->
+				<input type="search" name="start" placeholder="Starthaltestelle eingeben" list="haltestellen">
+				<input type="search" name="end" placeholder="Endhaltestelle eingeben" list="haltestellen">
+				<!--Aufgabe 1.f-->
+				<datalist id="haltestellen">
+	        	                <option value="Universität Ulm">
+	                	        <option value="Ehinger Tor">
+	                	        <option value="Ulm Rathaus">
+					<option value="Neu-Ulm Rathaus">
+	                	        <option value="Theater">
+	                	        <option value="Willy-Brandt-Platz">
+				</datalist>
+				<input type="button" value="->">
+				<div class="resultfield" contenteditable="true">
+					<!--mit Beipieldaten-spaeter dynamisch-->
+					<line>Linie 15 </line> <currentstop> (Ulm Willy-Brandt-Platz):</currentstop><br>
+					<start>Ulm Universitaet West </start><time>(13:36)</time><end> -> Ulm Willy-Brandt-Platz </end><time>(14:04)</time><br>
+					<line>Linie 4 </line> <currentstop> (Grimmelfingen Eisenbahnstrasse):</currentstop><br>
+					<start>Ulm Willy-Brandt-Platz </start><time>(14:04)</time><end> -> Ulm Rathaus </end><time>(14:09)</time><br>
+					<line>Linie 5 </line> <currentstop> (Ludwigsfeld Hasenweg):</currentstop><br>
+					<start>Ulm Rathaus </start><time>(14:09)</time><end> -> Neu-Ulm Rathaus </end><time>(14:11)</time><br>
+				</div>
+
+			</section>
+
+			<section id="ergebnis">
+				<!--Aufgabe 1.e-->
+				<h2>Favorit: Haltestelle</h2>
+				<div class="favoritfield" contenteditable="true">
+					<!--mit Beipieldaten-spaeter dynamisch-->
+					<ul>
+						<li> 
+							<time>16:03</time>
+							<line> Linie 5 </line>
+							<endstop> (Wissenschaftsstadt) </endstop>
+						 </li>
+						<li> 
+							<time>16:10</time>
+							<line> Linie 3 </line>
+							<endstop> (Wiblingen) </endstop>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+
+
+		<!--Aufgabe 1.c-->
+		<footer>
+			<small>&copy; Copyright Web Engine 2019, Gruppe N</small>
+		</footer>
+	</body>
+
+</html>
