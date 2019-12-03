@@ -1,0 +1,82 @@
+<html>
+	<head>
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	</head>
+
+	<body>
+		<header>
+			<nav class="navbar navbar-default">
+				<!--navigation über die gesamte Bildschirmbreite-->	
+				<div class="container-fluid">
+					<!--enthalt den Seitentitel-->
+					<h1 class="navbar-header text-success" href="#">Web Engineering Routenplaner</h1>
+				</div>
+			</nav>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!--navigationselemente-->
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li ><a href="#">Stops</a></li>  
+					</ul>
+						
+				</div>
+			</nav>
+		</header>
+	
+		<main>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-8">
+						<section id="routensuche">
+							<div class="row">
+								<input type="search" name="start" placeholder="Starthaltestelle eingeben" list="haltestellen">
+								<input type="search" name="end" placeholder="Endhaltestelle eingeben" list="haltestellen">
+								<datalist id="haltestellen">
+	        	                				<option value="Universität Ulm">
+	                	    					<option value="Ehinger Tor">
+	                	        				<option value="Ulm Rathaus">
+									<option value="Neu-Ulm Rathaus">
+	                	        				<option value="Theater">
+	                	        				<option value="Willy-Brandt-Platz">
+								</datalist>
+								<input type="button" value="->">
+							</div>
+						</section>
+					</div>
+					<div class="col-sm-4" style="background-color:lavenderblush;">			<section id="ergebnis">
+						<h2>Favorit: Haltestelle</h2>
+						<div class="favoritfield" contenteditable="true">
+							<!--mit Beipieldaten-spaeter dynamisch-->
+							<ul>
+								<li> 
+									<time>16:03</time>
+									<line> Linie 5 </line>
+									<endstop> (Wissenschaftsstadt) </endstop>
+								 </li>
+								<li> 
+									<time>16:10</time>
+									<line> Linie 3 </line>
+									<endstop> (Wiblingen) </endstop>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row top-buffer">
+					<div class="col-sm-8">
+						<div class="resultfield" contenteditable="true">
+							<!--mit Beipieldaten-spaeter dynamisch-->
+							<line>Linie 15 </line> <currentstop> (Ulm Willy-Brandt-Platz):</currentstop><br>
+							<start>Ulm Universitaet West </start><time>(13:36)</time><end> -> Ulm Willy-Brandt-Platz </end><time>(14:04)</time><br>
+							<line>Linie 4 </line> <currentstop> (Grimmelfingen Eisenbahnstrasse):</currentstop><br>
+							<start>Ulm Willy-Brandt-Platz </start><time>(14:04)</time><end> -> Ulm Rathaus </end><time>(14:09)</time><br>
+							<line>Linie 5 </line> <currentstop> (Ludwigsfeld Hasenweg):</currentstop><br>
+							<start>Ulm Rathaus </start><time>(14:09)</time><end> -> Neu-Ulm Rathaus </end><time>(14:11)</time><br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
