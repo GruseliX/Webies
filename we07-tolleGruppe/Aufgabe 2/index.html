@@ -28,7 +28,7 @@
     </header>
     <div class="container">
         <main>
-            <preference class="coll col-half-0">
+            <section class="coll col-half-0 preference">
                 <form action="form()" id="pref_home">
                     <input list="start_home_list" type="text" name="start_home" placeholder="Starthaltestelle">
                     <datalist id="start_home_list">
@@ -48,8 +48,8 @@
                     </datalist>
                     <input type="submit" value="->">
                 </form>
-            </preference>
-            <favorit class="col col-half-1">
+            </section>
+            <section class="col col-half-1 favorit">
 
                 <ul id="fav_home">
                     <h2>Favorit: Universität Süd</h2>
@@ -62,8 +62,8 @@
                         (<span>Wiblingen</span>)
                     </li>
                 </ul>
-            </favorit>
-            <result class="col col-full">
+            </section>
+            <section class="col col-full result">
                 <div class="res_item"><span class="line">Linie 15</span> (<span class="line_name">Ulm
                         Willy-Brndt-Platz</span>):
                     <br><span>Ulm</span> <span>Universität West</span>
@@ -82,11 +82,12 @@
                     ( <span>14:09</span> ) ->
                     <span>Neu-Ulm</span> <span>Rathaus</span>
                     ( <span>14:11</span> )</div>
-            </result>
-            <asside>
-
-            </asside>
+                </section>
+           
         </main>
+        <asside>
+
+        </asside>
     </div>
     <footer>
         <p class="footer_text">&copy; Copyright WebEnge 2019, Gruppe N, <a href="https://www.uni-ulm.de">Universität
