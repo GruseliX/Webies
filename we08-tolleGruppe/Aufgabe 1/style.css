@@ -21,7 +21,7 @@ button:hover{
 }
 
 ul{
-    margin-top: 10px;
+    margin-top: 2%;
     list-style: none;
     padding-left: 0px;
 }
@@ -46,7 +46,7 @@ header, footer{
 
 /* header */
 header {
-    padding: 20px 20px 0px 20px;
+    padding: 3% 3% 0% 3%;
 }
 
 .active{
@@ -54,13 +54,13 @@ header {
 }
 
 nav{
-    margin-top: 5px;
+    margin-top: 1%;
 }
 
 nav a{
     background-color: green;
     text-decoration: none;
-    padding: 5px;
+    padding: 0.5%;
     display: inline-block; /* allows width, height */
     color: white;
 }
@@ -76,7 +76,7 @@ nav a:hover{
 /* footer */
 footer{
     font-size: 0.8rem; /* font size relative to the root element */
-    padding: 10px 20px 10px 20px;
+    padding: 0.5% 2% 0.5% 2%;
 }
 
 
@@ -84,7 +84,8 @@ footer{
  -------------------------------------------*/
 
 main {
-    padding: 20px;
+    padding: 3%;
+    display: -webkit-flex;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -96,7 +97,7 @@ main section{
 
 main aside{
     order: 2;
-    margin-left: 20px;
+    margin-left: 3%;
 }
 
 /* index page */
@@ -110,19 +111,19 @@ main aside{
 
 .search-form{
     display: flex;
-    margin-bottom: 5px;
+    margin-bottom: 0.2%;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .search-form * {
-    height: 20px;
-    line-height: 20px;
+    height: 3%;
+    line-height: 3%x;
 }
 
 .stop-input{
     flex-grow: 2;
-    margin-right: 5px;
+    margin-right: 0.2%;
 }
 
 .stop-btn{
@@ -133,18 +134,18 @@ main aside{
     position: relative;
     background-color: #333;
     color: white;
-    padding: 10px;
+    padding: 1.5%;
 }
 
 
 /* stop page */
 .stop-content aside{
-    height: 400px;
+    height: 20%;
     flex-grow: 4;
 }
 
 #map{
-    height: 400px;
+    height: 20%;
 }
 
 .stop-content section{
@@ -155,8 +156,8 @@ main aside{
 
 .stopentry{
     border: 1px solid black;
-    padding: 10px;
-    margin-top: 1px;
+    padding: 1.5%;
+    margin-top: 0.01%;
     flex-grow: 1;
     display: flex;
 }
@@ -167,4 +168,88 @@ main aside{
 
 .stopentry:hover{
     background-color: green;
+}
+
+/* //TODO order querrys */
+/* Default Mobile */
+@media (max-width:399px) {
+    
+    main {
+        padding: 0%;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+/* Groesser als mobile */
+@media (min-width: 400px) {
+    main {
+        padding: 0%;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+/* Groesser als Phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+    main {
+        padding: 0.2%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        -webkit-flex-wrap: nowrap;
+        -moz-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+}
+
+/* Groesser als Tablet */
+@media (min-width: 750px) {
+    main {
+        padding: 0.4%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        -webkit-flex-wrap: nowrap;
+        -moz-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+}
+
+/* Groesser als Desktop */
+@media (min-width: 1000px) {
+    main {
+        padding: 1%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-wrap: nowrap;
+        -moz-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+}
+
+/* Groesser als Desktop HD */
+@media (min-width: 1200px) {
+    main {
+        padding: 2%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-flex-wrap: nowrap;
+        -moz-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
 }
