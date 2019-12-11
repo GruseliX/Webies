@@ -183,6 +183,14 @@ main aside{
         -moz-flex-wrap: wrap;
         flex-wrap: wrap;
     }
+    main section{
+        order: 2;
+    }
+    
+    main aside{
+        order: 1;
+        margin-left: 3%;
+    }
 }
 
 /* Groesser als mobile */
@@ -195,6 +203,15 @@ main aside{
         -webkit-flex-wrap: wrap;
         -moz-flex-wrap: wrap;
         flex-wrap: wrap;
+    }
+
+    main section{
+        order: 2;
+    }
+    
+    main aside{
+        order: 1;
+        margin-left: 3%;
     }
 }
 
@@ -209,6 +226,15 @@ main aside{
         -webkit-flex-wrap: nowrap;
         -moz-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    }
+
+    main section{
+        order: 1;
+    }
+    
+    main aside{
+        order: 2;
+        margin-left: 3%;
     }
 }
 
@@ -238,6 +264,15 @@ main aside{
         -moz-flex-wrap: nowrap;
         flex-wrap: nowrap;
     }
+
+    main section{
+        order: 1;
+    }
+    
+    main aside{
+        order: 2;
+        margin-left: 3%;
+    }
 }
 
 /* Groesser als Desktop HD */
@@ -251,5 +286,14 @@ main aside{
         -webkit-flex-wrap: nowrap;
         -moz-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    }
+
+    main section{
+        order: 1;
+    }
+    
+    main aside{
+        order: 2;
+        margin-left: 3%;
     }
 }
