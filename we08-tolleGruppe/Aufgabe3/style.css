@@ -1,0 +1,130 @@
+/* Vor generiertes Styling, hier nichts ändern sondern vorzugsweise am Ende der Datei neue Styledefinitionen einfügen*/
+body{
+    margin: 0px;
+}
+
+body *{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-header{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: darkolivegreen;
+    margin: 0px;
+    color: white;
+    padding: 5px 50px 5px 50px;
+}
+
+ul{
+    padding-left: 0px;
+    list-style: none;
+    margin-top: 0px;
+}
+
+h1{
+    margin: 0px;
+}
+
+ul li{
+    border: 1px solid darkslategray;
+    background-color: darkslategray;
+    padding: 5px;
+    display: inline-block;
+    margin: 0px;
+    user-select: none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+}
+
+.page-header{
+    top: 0px;
+}
+
+.page-main {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+}
+
+.cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards li {
+    border: 2px solid #490A3D;
+    border-radius:5px;
+    background-color: #BD1550;
+    color: #fff;
+}
+
+.cards h2 {
+    background-color: #490A3D;
+    margin: 0;
+    padding: 10px;
+}
+
+.cards p {
+    padding: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Style Definition vorzugsweise hier drunter einfügen*/
+
+/* Aufgabe 3*/
+
+/* a.)  Karten Reihenweise */
+#flexi.rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* a.)  Karten verschieden hoch, centriert - cross-linie */
+    align-items: center;
+}
+
+/* b.)  wechseln der Ansicht */
+#flexi.columns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* a.)  Karten verschieden hoch, centriert - cross-linie */
+    align-items: center;
+}
+
+/* c.)  sortieren */
+#flexi.ordered #card1{
+    order: 1;
+}
+#flexi.ordered #card2{
+    order: 2;
+}
+#flexi.ordered #card3{
+    order: 3;
+}
+#flexi.ordered #card4{
+    order: 4;
+}
+#flexi.ordered #card5{
+    order: 5;
+}
+
+
+/* a.)  min Breite 200px, important doppelt so stark */
+.important {
+    flex-basis: 200px;
+    flex-grow: 2;
+}
+
+li:not(.important) {
+    flex-basis: 200px;
+    flex-grow: 1;
+}
