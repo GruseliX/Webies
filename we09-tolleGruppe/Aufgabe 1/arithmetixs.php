@@ -24,12 +24,12 @@ function div($a,$b) {
     return $a / $b;
 }
 
+/**
+ * 
+ */
 function inProcessed(&$input, &$functionTable, &$preprocessed){
     $temp = explode(" ",$input);
-    $temp1 = array_intersect_key($temp,$functionTable);
-    $temp = array_replace($temp, $temp1);
     $preprocessed = getArray($temp);
-    echo "hallo";
 
 }
 
