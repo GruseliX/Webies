@@ -1,6 +1,6 @@
 <?php 
 
-$input = "− / 15 − 7 + 1 1 3 + 2 + 1 1";
+$input = "- / 15 - 7 + 1 1 3 + 2 + 1 1";
 $functionTable = array("+" => "add($operant_1,$operant)","-" => "sub($operant_1,$operant)", "*" => "mult($operant_1,$operant)", "/" => "div($operant_1,$operant)");
 $preprocessed = array("a","b");
 $operatoren = array();
@@ -58,32 +58,35 @@ function process(){
     global $preprocessed,$functionTable, $pendingOperand, $operant, $operant_1, $operanten, $operatoren;
 
     foreach($preprocessed as $key => $value){
-        echo $key . ' ' .$value . ' :: ';
-        echo in_array($key,$functionTable). "::"; // Warum trit hier der Fehler auf???
-        if(in_array($key,$functionTable)){
+        echo "k v = ".$key . ' ' .$value . ' :: ';
+        echo "v in fT = ".array_key_exists($value,$functionTable). " ::"; // Warum trit hier der Fehler auf???
+        if(array_key_exists($value,$functionTable)){
             array_push($operatoren,$value);
-            $pendingOperand = false;
+            $pendingOperand = 0;
+            echo "k v in if = ".$value. ' '. $key. ' ::';
         }else{
             $operant = $value;
-            echo $value. ' '. $key.'::';
-            
+            echo "v k in el = ".$value. ' '. $key. ' ::';
+            echo "pO = ".$pendingOperand. ' ::';
             if($pendingOperand){
-                while(count($operanten)>=1){
-                    echo $functionTable[array_pop($operatoren)];
+                echo " count Op = ".count($operanten). ' ::';
+                while(count($operanten)>=0){
                     $operant_1 = array_pop($operanten);
                     $operand = $functionTable[array_pop($operatoren)];
                 }
-                array_push($operanten,$operand);
-                $pendingOperand = true;
+                
             }
+            array_push($operanten,$operand);
+            $pendingOperand = 1;
         }
+        
         // echo "<p>operatoren</p>";
         // var_dump($operatoren);
         // echo "<p>Operanten</p>";
         // var_dump($operanten);
         echo "<br>";
     }
-
+    var_dump($operanten);
     return array_pop($operanten);
 
 }
