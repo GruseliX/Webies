@@ -56,13 +56,15 @@ function getArray($array) {
 function process(){
 
     global $preprocessed,$functionTable, $pendingOperand, $operant, $operant_1, $operanten, $operatoren;
-    
-    foreach($preprocessed as $item){
-        if(in_array($value,$functionTable)){
+
+    foreach($preprocessed as $key => $value){
+        echo $key . ' ' .$value . '<br>';
+        if(in_array($key,$functionTable)){
             array_push($operatoren,$value);
             $pendingOperand = false;
         }
         else{
+
             $operant = $value;
             if($pendingOperand){
                 while(count($operanten)>=1){
@@ -73,6 +75,10 @@ function process(){
                 $pendingOperand = true;
             }
         }
+        // echo "<p>operatoren</p>";
+        // var_dump($operatoren);
+        // echo "<p>Operanten</p>";
+        // var_dump($operanten);
     }
 
     return array_pop($operanten);
@@ -93,10 +99,9 @@ echo "<br>";
 preProcessed($input,$preprocessed);
 echo "<h2>String in Arrayform</h2>";
 print_r($preprocessed);
-process($preprocessed);
-print_r($preprocessed);
 
-echo "<h1> Aufgabe 2</h1>";
+
+echo "<h1>Aufgabe 2</h1>";
 echo process();
 
 
