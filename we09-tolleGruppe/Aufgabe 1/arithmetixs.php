@@ -1,7 +1,7 @@
 <?php 
 
 $input = "- / 15 - 7 + 1 1 3 + 2 + 1 1";
-$functionTable = array("+" => "add($operant_1,$operant)","-" => "sub($operant_1,$operant)", "*" => "mult($operant_1,$operant)", "/" => "div($operant_1,$operant)");
+$functionTable = array("+" => "add","-" => "sub", "*" => "mult", "/" => "div");
 $preprocessed = array("a","b");
 $operatoren = array();
 $operanten = array();
@@ -70,11 +70,12 @@ function process(){
             echo "pO = ".$pendingOperand. ' ::';
             if($pendingOperand){
                 echo " count Op = ".count($operanten). ' ::';
-                while(count($operanten)>=0){
+                while(count($operanten)>=1){
                     $operant_1 = array_pop($operanten);
-                    $operand = $functionTable[array_pop($operatoren)];
+                    echo "op_1 = ".$operant_1.' ::';
+                    $operand = $functionTable[array_pop($operatoren)]."($operand_1,$operand)";
+                    echo "op = ".$operant_1.' ::';
                 }
-                
             }
             array_push($operanten,$operand);
             $pendingOperand = 1;
