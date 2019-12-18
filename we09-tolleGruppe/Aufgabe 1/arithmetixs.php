@@ -58,16 +58,18 @@ function process(){
     global $preprocessed,$functionTable, $pendingOperand, $operant, $operant_1, $operanten, $operatoren;
 
     foreach($preprocessed as $key => $value){
-        echo $key . ' ' .$value . '<br>';
+        echo $key . ' ' .$value . ' :: ';
+        echo in_array($key,$functionTable). "::"; // Warum trit hier der Fehler auf???
         if(in_array($key,$functionTable)){
             array_push($operatoren,$value);
             $pendingOperand = false;
-        }
-        else{
-
+        }else{
             $operant = $value;
+            echo $value. ' '. $key.'::';
+            
             if($pendingOperand){
                 while(count($operanten)>=1){
+                    echo $functionTable[array_pop($operatoren)];
                     $operant_1 = array_pop($operanten);
                     $operand = $functionTable[array_pop($operatoren)];
                 }
@@ -79,6 +81,7 @@ function process(){
         // var_dump($operatoren);
         // echo "<p>Operanten</p>";
         // var_dump($operanten);
+        echo "<br>";
     }
 
     return array_pop($operanten);
@@ -99,6 +102,8 @@ echo "<br>";
 preProcessed($input,$preprocessed);
 echo "<h2>String in Arrayform</h2>";
 print_r($preprocessed);
+echo "<br>";
+print_r($functionTable);
 
 
 echo "<h1>Aufgabe 2</h1>";
