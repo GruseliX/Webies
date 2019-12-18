@@ -53,6 +53,7 @@ function getArray($array) {
  * Funktion welche die Rechnung ausfuehren 
  */
 
+ // Die Ausgaben zwischen drin dienen zum Debugging
 function process(){
 
     global $preprocessed,$functionTable, $pendingOperand, $operant, $operant_1, $operanten, $operatoren;
@@ -80,7 +81,6 @@ function process(){
             array_push($operanten,$operand);
             $pendingOperand = 1;
         }
-        
         // echo "<p>operatoren</p>";
         // var_dump($operatoren);
         // echo "<p>Operanten</p>";
@@ -89,7 +89,6 @@ function process(){
     }
     var_dump($operanten);
     return array_pop($operanten);
-
 }
 
 
