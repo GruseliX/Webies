@@ -7,9 +7,9 @@
         private $line = null;
 
         function __construct($endNote, $cost, $line){
-            $this.$endNote -> $endNote;
-            $this.$cost -> $cost;
-            $this.$line -> $line;
+            $this -> $endNote = $endNote;
+            $this -> $cost = $cost;
+            $this -> $line = $line;
         }
 
         /**
@@ -17,7 +17,7 @@
          * @return endnote
          */
         function getEndNote(){
-            return $this -> $endNote;
+            return $endNote;
         }
 
         /**
@@ -25,7 +25,7 @@
          * @return cost
          */
         function getCost(){
-            return $this -> $cost;
+            return $cost;
         }
 
         /**
@@ -33,7 +33,7 @@
          * @return line
          */
         function getLine(){
-            return $this -> $line;
+            return $line;
         }
 
     }

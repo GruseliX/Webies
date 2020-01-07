@@ -61,7 +61,7 @@ class Graph{
      * print
      * Prints the praph with all its nodes and their edges  
      */
-    function print(){
+    function myPrint(){
         echo "<p>";
         foreach($notes as $val){
             $edges  ->  $val -> getEdges();
