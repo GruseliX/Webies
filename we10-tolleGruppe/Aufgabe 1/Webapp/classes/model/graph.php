@@ -62,14 +62,14 @@ class Graph{
      * Prints the praph with all its nodes and their edges  
      */
     function print(){
-        echo "<p>"
+        echo "<p>";
         foreach($notes as $val){
             $edges = $val.getEdges();
             
             echo $val." ";
             foreach($edges as $v){
-                echo "-> "
-                echo $v.getEndnode().getId();
+                echo "-> ";
+                echo "".$v.getEndnode().getId();
             }
             echo "<br>";
         }
