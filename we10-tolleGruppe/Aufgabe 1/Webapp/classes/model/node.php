@@ -24,7 +24,7 @@ class Node{
      * @return none
      */
     function addEdge($edge){
-        array_push(this.$edges,$edge);
+        array_push($edges,$edge);
         print_r(this.$edges); 
     }
 
@@ -36,9 +36,9 @@ class Node{
      */
     function getEdge($node){
         $ret = null;
-        for(§edges as $v){
+        foreach ($edges as $v){
             if($v.getEndnode() === $node){
-                $ret = node
+                $ret = node;
             }
         }
         if($ret == null){
