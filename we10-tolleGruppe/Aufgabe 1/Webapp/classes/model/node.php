@@ -12,7 +12,7 @@ class Node{
      * @return none
      */
     function __construct($id){
-        this.$nodeID = $id;
+        $this -> $nodeID = $id;
         //this.$nodeID = Graph.lastNode().getId() + 1 ;
     }
 
@@ -26,7 +26,7 @@ class Node{
      */
     function addEdge($edge){
         array_push($edges,$edge);
-        print_r(this.$edges); 
+        print_r($edges); 
     }
 
     /**
@@ -38,12 +38,12 @@ class Node{
     function getEdge($node){
         $ret = null;
         foreach ($edges as $v){
-            if($v.getEndnode() === $node){
+            if($v -> getEndnode() === $node){
                 $ret = node;
             }
         }
         if($ret == null){
-            throw new Exception("No edge between Node ".$node.getId()." and this Node ".this.getId()."." );
+            throw new Exception("No edge between Node ".$node -> getId()." and this Node ".$this.getId()."." );
         }
         return $ret;
     }

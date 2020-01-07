@@ -13,7 +13,7 @@ class Graph{
      */
     function addNode($id){
         if ($nodes[$id] == null){
-            this.$nodes = array_push($nodes,$id);
+            $nodes -> array_push($nodes,$id);
         }
         else{
             throw new Exception("the Node with the ID ".$id." exists alredy." );
@@ -29,8 +29,8 @@ class Graph{
      * @param line      : the line that drives on this edge
      */
     function addEdge($startId, $endId, $cost, $line){
-        $startNode = this.findNode($startId);
-        $endNode = this.findNode($endId);
+        $startNode = $this -> findNode($startId);
+        $endNode = $this -> findNode($endId);
         $newEdge = new Edge($endNode, $cost, $line);
         if($startNode == null){
             throw new Exception($startId." is not an startnode" );
@@ -38,8 +38,8 @@ class Graph{
         if($endnode == null){
             throw new Exception($endId." is not an endnode" );
         }
-        $startnode.addEdge($newEdge);
-        this.$notes.array_push($newEdge);
+        $startnode -> addEdge($newEdge);
+        $notes -> array_push($newEdge);
     }
 
     /**
@@ -54,7 +54,7 @@ class Graph{
             throw new Exception("A node with that id ". $id . "is not contained in this graph." ); 
             return;
         }
-        return node;
+        return $node;
     }
 
     /**
@@ -64,12 +64,12 @@ class Graph{
     function print(){
         echo "<p>";
         foreach($notes as $val){
-            $edges = $val.getEdges();
+            $edges  ->  $val -> getEdges();
             
             echo $val." ";
             foreach($edges as $v){
                 echo "-> ";
-                echo "".$v.getEndnode().getId();
+                echo "".$v -> getEndnode() -> getId();
             }
             echo "<br>";
         }
@@ -82,7 +82,7 @@ class Graph{
      * @return this [Graph] returns the whole graph 
      */
     function getGraph(){
-        return this;
+        return $this;
     }
 }
 ?>

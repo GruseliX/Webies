@@ -7,9 +7,9 @@ class Departure{
     private $time = null;
 
     function __construct($line, $display, $time){
-        this.$line = $line;
-        this.$display = $display;
-        this.$time = $time;
+        $this.$line -> $line;
+        $this.$display -> $display;
+        $this.$time -> $time;
     }
 
     /**
@@ -17,7 +17,7 @@ class Departure{
      * @return line
      */
     function getLine(){
-        return this.$line;
+        return $this -> $line;
     }
 
     /**
@@ -25,7 +25,7 @@ class Departure{
      * @return display
      */
     function getDisplay(){
-        return this.$display;
+        return $this -> $display;
     }
 
     /**
@@ -33,7 +33,7 @@ class Departure{
      * @return time
      */
     function getTime(){
-        return this.$time;
+        return $this -> $time;
     }
 }
 ?>

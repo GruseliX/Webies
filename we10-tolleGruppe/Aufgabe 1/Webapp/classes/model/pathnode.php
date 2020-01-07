@@ -7,9 +7,9 @@ class PathNode{
     private $line = null;
 
     function __construct($id, $cost, $line){
-        this.$id = $id;
-        this.$cost = $cost;
-        this.$line = $line;
+        $this -> $id = $id;
+        $this -> $cost = $cost;
+        $this -> $line = $line;
     }
 
     /**
@@ -17,7 +17,7 @@ class PathNode{
      * @return id
      */
     function getId(){
-        return this.$id;
+        return $id;
     }
 
     /**
@@ -25,7 +25,7 @@ class PathNode{
      * @return cost
      */
     function getCost(){
-        return this.$cost;
+        return $cost;
     }
 
     /**
@@ -33,7 +33,7 @@ class PathNode{
      * @return line
      */
     function getLine(){
-        return this.$line;
+        return $line;
     }
 }
 ?>
