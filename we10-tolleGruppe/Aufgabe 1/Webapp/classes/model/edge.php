@@ -6,13 +6,34 @@
         private $cost = 0.00;
         private $line = null;
 
-        function __construct(){
-            //TODO fertigstellen
+        function __construct($endNote, $cost, $line){
+            this.$endNote = $endNote;
+            this.$cost = $cost;
+            this.$line = $line;
         }
 
-        function getEdge($endNote){
-            //TODO fertigstellen 
-            return edge;
+        /**
+         * getEndNote
+         * @return endnote
+         */
+        function getEndNote(){
+            return this.$endNote;
+        }
+
+        /**
+         * getCost
+         * @return cost
+         */
+        function getCost(){
+            return this.$cost;
+        }
+
+        /**
+         * getLine
+         * @return line
+         */
+        function getLine(){
+            return this.$line;
         }
 
     }
