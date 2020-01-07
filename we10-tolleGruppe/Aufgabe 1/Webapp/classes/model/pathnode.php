@@ -6,7 +6,7 @@ class Node{
     private $cost = 0;
     private $line = null;
 
-    __construct(){
+    function __construct(){
         //TODO fertigstellen
     }
 

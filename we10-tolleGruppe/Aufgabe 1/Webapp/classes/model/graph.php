@@ -4,7 +4,7 @@ class Graph{
 
     private $nodes = array(null);
     
-    __construct($nodes){
+    function __construct($nodes){
         //TODO fertigstellen
     }
 

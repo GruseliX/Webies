@@ -6,7 +6,7 @@ class Line{
     private $dislay = "";
     private $heading = 0;
 
-    __construct(){
+    function __construct(){
         //TODO fertigstellen
     }
 

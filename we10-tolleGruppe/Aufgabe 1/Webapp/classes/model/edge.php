@@ -6,7 +6,7 @@
         private $cost = 0.00;
         private $line = null;
 
-        constructor(){
+        function __construct(){
             //TODO fertigstellen
         }
 

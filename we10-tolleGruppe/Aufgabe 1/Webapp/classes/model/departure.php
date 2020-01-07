@@ -6,7 +6,7 @@ class Node{
     private $display = "";
     private $time = null;
 
-    __construct(){
+    function __construct(){
         //TODO fertigstellen
     }
 
