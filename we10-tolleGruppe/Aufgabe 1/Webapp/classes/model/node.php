@@ -12,7 +12,7 @@ class Node{
      * @return none
      */
     function __construct($id){
-        $this -> $nodeID = $id;
+        $nodeID = $id;
         //this.$nodeID = Graph.lastNode().getId() + 1 ;
     }
 
