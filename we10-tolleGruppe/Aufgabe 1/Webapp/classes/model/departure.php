@@ -1,18 +1,39 @@
 <?php
 
-class Node{
+class Departure{
 
     private $line = 0;
     private $display = "";
     private $time = null;
 
-    function __construct(){
-        //TODO fertigstellen
+    function __construct($line, $display, $time){
+        this.$line = $line;
+        this.$display = $display;
+        this.$time = $time;
     }
 
-    function getDeparture($node){
-        //TODO fertigstellen
-        return departure;
+    /**
+     * getLine
+     * @return line
+     */
+    function getLine(){
+        return this.$line;
+    }
+
+    /**
+     * getDisplay
+     * @return display
+     */
+    function getDisplay(){
+        return this.$display;
+    }
+
+    /**
+     * getTime
+     * @return time
+     */
+    function getTime(){
+        return this.$time;
     }
 }
 ?>
