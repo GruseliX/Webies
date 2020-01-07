@@ -11,8 +11,9 @@ class Node{
      * @param none
      * @return none
      */
-    function __construct(){
-        this.$nodeID = Graph.lastNode().getId() + 1 ;
+    function __construct($id){
+        this.$nodeID = $id;
+        //this.$nodeID = Graph.lastNode().getId() + 1 ;
     }
 
     /**

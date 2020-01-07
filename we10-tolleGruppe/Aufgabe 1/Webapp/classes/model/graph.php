@@ -26,7 +26,11 @@ class Graph{
     }
 
     function findNode($id){
-        //TODO fertigstellen
+        $node = null;
+        $node = nodes[$id];
+        if($node == null){
+            throw new Exception("A node with that id ". $id . "is not contained in this graph." ); 
+        }
         return node;
     }
 
