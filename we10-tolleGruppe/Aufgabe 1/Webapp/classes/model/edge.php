@@ -2,7 +2,7 @@
 
     class Edge{
 
-        private $endNote = "";
+        private $endNote;
         private $cost = 0.00;
         private $line;
 

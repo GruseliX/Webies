@@ -12,13 +12,10 @@ class Graph{
      * @param id the ID of the new node 
      */
     function addNode($id){
-        
         if ($nodes[$id] == NULL){
             $newNode = new Node($id);
             $nodes[] = $newNode;
-            //var_dump($nodes);
             //array_push($nodes,$nNode); // tut leider so nicht...
-
         }
         else{
             throw new Exception("The Node with the ID ".$id." exists alredy." );
@@ -34,7 +31,6 @@ class Graph{
      * @param line      : the line that drives on this edge
      */
     function addEdge($startId, $endId, $cost, $line){
-        echo "addEdge";
         $startNode = $this -> findNode($startId);
         $endNode = $this -> findNode($endId);
         $newEdge = new Edge($endNode, $cost, $line);
@@ -46,7 +42,6 @@ class Graph{
         }
         $startnode -> addEdge($newEdge);
         array_push($notes,$newEdge);
-        var_dump($nodes);
     }
 
     /**
@@ -58,7 +53,7 @@ class Graph{
         $node = null;
         $node = $nodes[$id];
         if($node == null){
-            throw new Exception("A node with that id ". $id . "is not contained in this graph." ); 
+            throw new Exception("A node with that id ".$id. "is not contained in this graph." ); 
             return;
         }
         return $node;

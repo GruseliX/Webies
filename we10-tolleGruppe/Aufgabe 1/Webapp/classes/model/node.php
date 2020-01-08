@@ -3,7 +3,7 @@
 class Node{
 
     private $nodeId = 0;
-    private $edges = array(0);
+    private $edges = array();
 
     /**
      * Constructor Node
