@@ -14,6 +14,7 @@ class Graph{
     function addNode($id){
         if ($nodes[$id] == NULL){
             $newNode = new Node($id);
+            // $this -> $nodes;
             $nodes[] = $newNode;
             //array_push($nodes,$nNode); // tut leider so nicht...
         }
@@ -52,8 +53,9 @@ class Graph{
     function findNode($id){
         $node = null;
         $node = $nodes[$id];
+        var_dump($nodes);
         if($node == null){
-            throw new Exception("A node with that id ".$id. "is not contained in this graph." ); 
+            throw new Exception("A node with that id ".$id." is not contained in this graph." ); 
             return;
         }
         return $node;
