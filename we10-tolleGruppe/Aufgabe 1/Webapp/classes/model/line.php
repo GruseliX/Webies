@@ -6,10 +6,10 @@ class Line{
     private $display = "";
     private $heading = 0;
 
-    function __construct($id, $dislay, $heading){
-        $this -> $id = $id;
-        $this -> $display = $display;
-        $this -> $heading = $heading;
+    function __construct($id, $display, $heading){
+        $this -> id = $id;
+        $this -> display = $display;
+        $this -> heading = $heading;
     }
 
     /**

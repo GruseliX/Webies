@@ -3,7 +3,7 @@
 class Node{
 
     private $nodeId = 0;
-    private $edges = array(null);
+    private $edges = array(0);
 
     /**
      * Constructor Node
@@ -12,7 +12,7 @@ class Node{
      * @return none
      */
     function __construct($id){
-        $nodeID = $id;
+        $this -> nodeID = $id;
         //this.$nodeID = Graph.lastNode().getId() + 1 ;
     }
 
@@ -25,8 +25,9 @@ class Node{
      * @return none
      */
     function addEdge($edge){
-        array_push($edges,$edge);
-        print_r($edges); 
+        $edges[] = $edge;
+        //array_push($edges,$edge);
+         
     }
 
     /**

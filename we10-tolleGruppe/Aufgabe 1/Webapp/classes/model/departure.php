@@ -7,9 +7,9 @@ class Departure{
     private $time = null;
 
     function __construct($line, $display, $time){
-        $this -> $line = $line;
-        $this -> $display = $display;
-        $this -> $time = $time;
+        $this -> line = $line;
+        $this -> display = $display;
+        $this -> time = $time;
     }
 
     /**

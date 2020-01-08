@@ -2,14 +2,14 @@
 
     class Edge{
 
-        private $endNote = null;
+        private $endNote = "";
         private $cost = 0.00;
-        private $line = null;
+        private $line;
 
         function __construct($endNote, $cost, $line){
-            $this -> $endNote = $endNote;
-            $this -> $cost = $cost;
-            $this -> $line = $line;
+            $this -> endNote = $endNote;
+            $this -> cost = $cost;
+            $this -> line = $line;
         }
 
         /**

@@ -2,7 +2,7 @@
 
 class Graph{
 
-    private $nodes = array(null);
+    private $nodes = array();
     
     function __construct(){}
 
@@ -12,11 +12,16 @@ class Graph{
      * @param id the ID of the new node 
      */
     function addNode($id){
-        if ($nodes[$id] == null){
-            $nodes -> array_push($nodes,$id);
+        
+        if ($nodes[$id] == NULL){
+            $newNode = new Node($id);
+            $nodes[] = $newNode;
+            //var_dump($nodes);
+            //array_push($nodes,$nNode); // tut leider so nicht...
+
         }
         else{
-            throw new Exception("the Node with the ID ".$id." exists alredy." );
+            throw new Exception("The Node with the ID ".$id." exists alredy." );
         }
     }
 
@@ -29,6 +34,7 @@ class Graph{
      * @param line      : the line that drives on this edge
      */
     function addEdge($startId, $endId, $cost, $line){
+        echo "addEdge";
         $startNode = $this -> findNode($startId);
         $endNode = $this -> findNode($endId);
         $newEdge = new Edge($endNode, $cost, $line);
@@ -39,7 +45,8 @@ class Graph{
             throw new Exception($endId." is not an endnode" );
         }
         $startnode -> addEdge($newEdge);
-        $notes -> array_push($newEdge);
+        array_push($notes,$newEdge);
+        var_dump($nodes);
     }
 
     /**
@@ -49,7 +56,7 @@ class Graph{
      */
     function findNode($id){
         $node = null;
-        $node = nodes[$id];
+        $node = $nodes[$id];
         if($node == null){
             throw new Exception("A node with that id ". $id . "is not contained in this graph." ); 
             return;
@@ -62,14 +69,22 @@ class Graph{
      * Prints the praph with all its nodes and their edges  
      */
     function myPrint(){
+        echo "<br>";
+        var_dump($nodes);
+        echo "<h3>Print</h3>";
         echo "<p>";
-        foreach($notes as $val){
-            $edges  ->  $val -> getEdges();
+
+        foreach($nodes ? $nodes : [] as $val){
+            echo "test";
+        }
+        foreach((array)$nodes as $val){
+            echo "Test";
+            $edges  ->  $val = getEdges();
             
             echo $val." ";
-            foreach($edges as $v){
+            foreach((array)$val -> $edges as $v){
                 echo "-> ";
-                echo "".$v -> getEndnode() -> getId();
+                echo "".$v -> getEndNode() -> getId();
             }
             echo "<br>";
         }

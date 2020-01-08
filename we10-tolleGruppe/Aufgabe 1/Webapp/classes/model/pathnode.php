@@ -7,9 +7,9 @@ class PathNode{
     private $line = null;
 
     function __construct($id, $cost, $line){
-        $this -> $id = $id;
-        $this -> $cost = $cost;
-        $this -> $line = $line;
+        $this -> id = $id;
+        $this -> cost = $cost;
+        $this -> line = $line;
     }
 
     /**
