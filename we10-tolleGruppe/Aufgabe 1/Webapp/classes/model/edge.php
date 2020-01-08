@@ -1,40 +1,31 @@
 <?php
+require_once("node.php");
 
-    class Edge{
+class Edge {
+    private $endNode;
+    private $cost;
+    private $line;
 
-        private $endNote;
-        private $cost = 0.00;
-        private $line;
-
-        function __construct($endNote, $cost, $line){
-            $this -> endNote = $endNote;
-            $this -> cost = $cost;
-            $this -> line = $line;
-        }
-
-        /**
-         * getEndNote
-         * @return endnote
-         */
-        function getEndNote(){
-            return $endNote;
-        }
-
-        /**
-         * getCost
-         * @return cost
-         */
-        function getCost(){
-            return $cost;
-        }
-
-        /**
-         * getLine
-         * @return line
-         */
-        function getLine(){
-            return $line;
-        }
-
+    function __construct($endNode, $cost, $line) {
+        $this->endNode = $endNode;
+        $this->cost = $cost;
+        $this->line = $line;
     }
+
+    public function getEndNode()
+    {
+        return $this->endNode;
+    }
+
+    public function getCost()
+    {
+        return $this->cost;
+    }
+
+    public function getLine()
+    {
+        return $this->line;
+    }
+}
+
 ?>

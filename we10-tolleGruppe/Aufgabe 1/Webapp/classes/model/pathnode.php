@@ -1,39 +1,28 @@
 <?php
+class PathNode {
+    private $id;
+    private $cost;
+    private $line;
 
-class PathNode{
-
-    private $id = 0;
-    private $cost = 0;
-    private $line = null;
-
-    function __construct($id, $cost, $line){
-        $this -> id = $id;
-        $this -> cost = $cost;
-        $this -> line = $line;
+    function __construct($id, $cost, $line) {
+        $this->id = $id;
+        $this->cost = $cost;
+        $this->line = $line;
     }
 
-    /**
-     * getId
-     * @return id
-     */
-    function getId(){
-        return $id;
+    public function getId()
+    {
+        return $this->id;
     }
 
-    /**
-     * getCost
-     * @return cost
-     */
-    function getCost(){
-        return $cost;
+    public function getCost()
+    {
+        return $this->cost;
     }
 
-    /**
-     * getLine
-     * @return line
-     */
-    function getLine(){
-        return $line;
+    public function getLine()
+    {
+        return $this->line;
     }
 }
 ?>
