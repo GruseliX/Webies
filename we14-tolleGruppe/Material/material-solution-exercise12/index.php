@@ -7,6 +7,12 @@
         <title>WebEng 2019 - Routenplaner</title>
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="style.css">
+
+        <script src="utils.js"></script>
+        <script src="index.js"></script>
+        <script>
+            window.onload(initData());
+        </script>
     </head>
     <body>
         <?php
